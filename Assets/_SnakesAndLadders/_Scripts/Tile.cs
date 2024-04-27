@@ -7,6 +7,7 @@ public class Tile : MonoBehaviour
     public TileType type;
 
     [Space(10)]
+    [SerializeField] private Renderer renderer;
     [SerializeField] private TextMeshProUGUI tileCountText;
 
     public void SetTileData(int _X, int _Y, TileType _Type, int tileCount)
@@ -21,8 +22,7 @@ public class Tile : MonoBehaviour
 
     public void ResetTileType() => type = TileType.Normal;
 
-    public bool IsSameRow(Tile _Tile) =>  y == _Tile.y;
-    public bool IsSameCol(Tile _Tile) =>  x == _Tile.x;
+    public void ApplyMaterial(Material _Mat) => renderer.material = _Mat;
     
 }// CLASS
 

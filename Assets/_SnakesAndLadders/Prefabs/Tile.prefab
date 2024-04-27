@@ -200,6 +200,7 @@ MonoBehaviour:
   x: 0
   y: 0
   type: 0
+  renderer: {fileID: 2751734998363313690}
   tileCountText: {fileID: 8875072859514467699}
 --- !u!1 &6425955476388187404
 GameObject:

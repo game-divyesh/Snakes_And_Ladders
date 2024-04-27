@@ -13,6 +13,9 @@ public class BoardGenerator : MonoBehaviour
     public int width = 10;
     public int height = 10;
     [SerializeField] private Tile tilePrefab;
+    [Space]
+    [SerializeField] private List<Material> materialList = new List<Material>();
+
     [Space(10)]
     public List<Tile> tiles = new List<Tile>();
 
@@ -91,6 +94,25 @@ public class BoardGenerator : MonoBehaviour
                 tile.SetTileData(col, row, TileType.Normal, tiles.Count + 1);
 
                 tiles.Add(tile);
+
+
+                // APPLY MATERIAL
+                if (leftToRight)
+                {
+                    if (col % 2 == 0)
+                        tile.ApplyMaterial(materialList[0]);
+                    else
+                        tile.ApplyMaterial(materialList[1]);
+                }
+                    
+                else
+                {
+                    if (col % 2 != 0)
+                        tile.ApplyMaterial(materialList[0]);
+                    else
+                        tile.ApplyMaterial(materialList[1]);
+                }
+                
             }
         }
     }

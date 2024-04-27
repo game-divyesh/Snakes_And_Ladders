@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
     public void SetDataOnGamePlayStart()
     {
         whosTurn = 0;
-        //BoardGenerator.Instance.GenerateRandomLadderAndSnake();
+        BoardGenerator.Instance.GenerateRandomLadderAndSnake();
         SetupPlayers();
 
         canRollDice = true;
