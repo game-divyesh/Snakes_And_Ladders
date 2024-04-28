@@ -664,7 +664,7 @@ MonoBehaviour:
   totalPlayer: 2
   whosTurn: 0
   canRollDice: 0
-  skipAnimation: 1
+  skipAnimation: 0
   playerPrefab: {fileID: 7518346850054206015, guid: 7e5e7e8cdfec6c24da214b4fe7c32bd8,
     type: 3}
   radius: 0.35
