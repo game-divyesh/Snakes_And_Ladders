@@ -223,9 +223,9 @@ public class SnakeAndLadderGenerator : MonoBehaviour
         else
             lineRenderer = Instantiate(snakePrefab, snakesParent);
 
-        Vector3 startPos = new Vector3(teleportTiles.startTile.transform.position.x, 0.05f, teleportTiles.startTile.transform.position.z);
+        Vector3 startPos = new Vector3(teleportTiles.startTile.transform.localPosition.x, 0.05f, teleportTiles.startTile.transform.localPosition.z);
 
-        Vector3 endPos = new Vector3(teleportTiles.endTile.transform.position.x, 0.05f, teleportTiles.endTile.transform.position.z);
+        Vector3 endPos = new Vector3(teleportTiles.endTile.transform.localPosition.x, 0.05f, teleportTiles.endTile.transform.localPosition.z);
 
         lineRenderer.SetPosition(0, startPos);
         lineRenderer.SetPosition(1, endPos);

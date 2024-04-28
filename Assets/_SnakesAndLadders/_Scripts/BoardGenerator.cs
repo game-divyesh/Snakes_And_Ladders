@@ -193,7 +193,7 @@ public class BoardGenerator : MonoBehaviour
             }
             snakeTiles.Clear();
         }
-
+        availableTiles.Clear();
         availableTiles.AddRange(tiles);
 
         snakeAndLadderGenerator.GenerateSnakesAndLadders(width, height, availableTiles, ladderTiles, snakeTiles);
